@@ -1,13 +1,21 @@
 import styled from "styled-components";
 
-function DessertCard({dessert}) {
- const {name, image, favorited} = dessert   
+function DessertCard({dessert, deleteRecipe}) {
+ const {name, image, favorited, id} = dessert   
+
+ 
+ const deleteHandler = () => {
+    fetch('http://localhost:3000/desserts/'+id, {method: "DELETE"})
+      .then(() => deleteRecipe(dessert))
+  }
+
     return (
     <CardWrapper>
         <h3>{name}</h3>
         <img src= {image} width= "200px" />
         <div>
             <button>{favorited ?"❤️" : "♡" }</button> 
+            <button onClick={deleteHandler} style={{backgroundColor: "Gray"}}>DELETE</button>
         </div>
     </CardWrapper>
     );

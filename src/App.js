@@ -14,12 +14,23 @@ useEffect(() => {
   .then(data => setDesserts(data))
 }, [])
 
+const addNewDessert = (newDessertObj) => {
+  setDesserts((prevArray) => [...prevArray, newDessertObj])
+}
+
+const deleteRecipe = (clickedRecipe) => {
+
+  const newArray = desserts.filter((oldDessertObj) => oldDessertObj.id !== clickedRecipe.id)
+  setDesserts(newArray)
+}
+
   return (
     <div className="App">
      <Header />
      <NavBar />
-     <DessertContainer  desserts={desserts}/>
-     <DessertForm />
+     <DessertForm addNewDessert={addNewDessert}/>
+     <DessertContainer  deleteRecipe={deleteRecipe} desserts={desserts}/>
+     
     </div>
   );
 }
