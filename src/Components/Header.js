@@ -1,8 +1,10 @@
+import {Link} from 'react-router-dom'
+
 function Header() {
 
 
     return (
-        <h2>Desserts On Us</h2>
+        <h2><Link to="/">Desserts On Us</Link></h2>
 
     )
 }

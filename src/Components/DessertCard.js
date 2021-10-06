@@ -1,7 +1,9 @@
+import {Link} from "react-router-dom";
 import styled from "styled-components";
 
+
 function DessertCard({dessert, deleteRecipe, setSelectedDessert}) {
- const {name, image, favorited, id} = dessert   
+ const {name, image, favorited, id} = dessert  
 
  
  const deleteHandler = () => {
@@ -9,13 +11,18 @@ function DessertCard({dessert, deleteRecipe, setSelectedDessert}) {
       .then(() => deleteRecipe(dessert))
   }
 
+ 
+
     return (
-    <CardWrapper onClick= {() => setSelectedDessert(dessert)}>
+    <CardWrapper >
+        <div onClick= {() => setSelectedDessert(dessert)}>
+        <Link to= "/desserts">   
         <h3>{name}</h3>
         <img src= {image} width= "200px" />
-        <div>
-            <button>{favorited ?"❤️" : "♡" }</button> 
-            <button onClick={deleteHandler} style={{backgroundColor: "Gray"}}>DELETE</button>
+        <div> 
+            <button onClick={deleteHandler} style={{backgroundColor: "Gray"}}>DELETE</button>    
+        </div>
+        </Link>
         </div>
     </CardWrapper>
     );
