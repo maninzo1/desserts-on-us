@@ -8,6 +8,7 @@ import DessertDetail from "./Components/DessertDetail";
 
 function App() {
   const [desserts, setDesserts] = useState([])
+  const [selectedDessert, setSelectedDessert] = useState([])
 
 useEffect(() => {
   fetch("http://localhost:3000/desserts")
@@ -30,7 +31,7 @@ const deleteRecipe = (clickedRecipe) => {
      <Header />
      <NavBar />
      <DessertForm addNewDessert={addNewDessert}/>
-     <DessertContainer  deleteRecipe={deleteRecipe} desserts={desserts}/>
+     <DessertContainer  setSelectedDessert= {setSelectedDessert} deleteRecipe={deleteRecipe} desserts={desserts}/>
      <DessertDetail />
     </div>
   );

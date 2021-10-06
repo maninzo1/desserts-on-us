@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-function DessertCard({dessert, deleteRecipe}) {
+function DessertCard({dessert, deleteRecipe, setSelectedDessert}) {
  const {name, image, favorited, id} = dessert   
 
  
@@ -10,7 +10,7 @@ function DessertCard({dessert, deleteRecipe}) {
   }
 
     return (
-    <CardWrapper>
+    <CardWrapper onClick= {() => setSelectedDessert(dessert)}>
         <h3>{name}</h3>
         <img src= {image} width= "200px" />
         <div>
