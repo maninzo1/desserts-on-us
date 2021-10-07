@@ -29,7 +29,7 @@ const addNewDessert = (newDessertObj) => {
 const deleteRecipe = (clickedRecipe) => {
 
   const newArray = desserts.filter((oldDessertObj) => oldDessertObj.id !== clickedRecipe.id)
-  setDesserts(newArray)
+  setDesserts(newArray) 
 }
 
 function handleFilterDessert(id) {
