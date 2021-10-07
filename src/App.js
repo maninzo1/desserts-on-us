@@ -33,7 +33,8 @@ const deleteRecipe = (clickedRecipe) => {
 }
 
 function handleFilterDessert(id) {
-  const filteredDesserts = fullDesserts.filter((dessert)=> dessert.tags === id)
+  const filteredDesserts = fullDesserts.filter((dessert)=> dessert.tags.includes(id))
+
   setDesserts(filteredDesserts)
 }
 
@@ -84,4 +85,3 @@ function handleFavorite(e, dessert){
 export default App;
 
 
-// const filteredDesserts = desserts.filter((dessertObj => desserts.name.toLowerCase().includes))

@@ -4,6 +4,7 @@ import styled from "styled-components";
 function NavBar({handleFilterDessert}) {
     return (
       <NavContainer>
+        <p onClick= {(e) => handleFilterDessert("")}>All</p>
         <p onClick= {(e) => handleFilterDessert(e.target.id)}id={"fruit"}>Fruit</p>
         <p onClick= {(e) => handleFilterDessert(e.target.id)}id={"pastry"}>Pastry</p>
         <p onClick= {(e) => handleFilterDessert(e.target.id)}id={"chocolate"}>Chocolate</p>
