@@ -17,5 +17,6 @@ const CardContainer = styled.div `
    display: flex;
    flex-direction: row;
    flex-wrap: wrap; 
-   margin: 0px auto; 
+   margin: 0px auto;
+   justify-content: center  
 `
