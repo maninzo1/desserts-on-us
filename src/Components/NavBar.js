@@ -1,14 +1,24 @@
 import {Link} from 'react-router-dom'
+import styled from "styled-components";
+
 function NavBar({handleFilterDessert}) {
     return (
-      <div>
+      <NavContainer>
         <p onClick= {(e) => handleFilterDessert(e.target.id)}id={"fruit"}>Fruit</p>
         <p onClick= {(e) => handleFilterDessert(e.target.id)}id={"pastry"}>Pastry</p>
         <p onClick= {(e) => handleFilterDessert(e.target.id)}id={"chocolate"}>Chocolate</p>
         <p onClick= {(e) => handleFilterDessert(e.target.id)}id={"dairy"}>Dairy</p>
         <Link to= "/desserts/new">Add a Recipe</Link>
-      </div>
+      </NavContainer>
     );
 }
 
 export default NavBar;
+
+const NavContainer = styled.div `
+    & a{
+        text-decoration:none;
+        color: black;
+    }
+
+`

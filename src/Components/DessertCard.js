@@ -37,5 +37,10 @@ const CardWrapper = styled.div `
     padding: 25px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.12);
     border-radius: 5px;
+    & a{
+        text-decoration:none;
+        color: black;
+    }
 
 `
+
