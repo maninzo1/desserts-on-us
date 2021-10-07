@@ -20,7 +20,7 @@ function DessertCard({dessert, deleteRecipe, setSelectedDessert}) {
         <h3>{name}</h3>
         <img src= {image} width= "200px" />
         <div> 
-            <button onClick={deleteHandler} style={{backgroundColor: "Gray"}}>DELETE</button>    
+            <p onClick={deleteHandler} style={{background: "#32a89e"}}>DELETE</p>    
         </div>
         </Link>
         </div>
@@ -40,6 +40,11 @@ const CardWrapper = styled.div `
     & a{
         text-decoration:none;
         color: black;
+    }
+    & p{
+        padding: 8px 32px;
+       
+        color: white;
     }
 
 `

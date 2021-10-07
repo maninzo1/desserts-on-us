@@ -16,9 +16,18 @@ function NavBar({handleFilterDessert}) {
 export default NavBar;
 
 const NavContainer = styled.div `
+    display: flex;
+    justify-content:center;
+    font-size: 20px;
+    & p{
+      padding: 0.5em 2em;
+      margin:0 0.3em 0.3em 0;
+  }
     & a{
         text-decoration:none;
         color: black;
+        padding: 0.5em 2em;
+        margin:0 0.3em 0.3em 0;
     }
 
 `
